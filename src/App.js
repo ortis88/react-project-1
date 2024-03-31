@@ -1,6 +1,5 @@
 //項目的根組件
 //被index.js引入->public/index.html渲染
-import './assets/sass/App.scss'
 import { createBrowserRouter , RouterProvider} from 'react-router-dom';
 
 import HomePage from './pages/Home';
