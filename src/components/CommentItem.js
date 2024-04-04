@@ -1,11 +1,25 @@
-let list=[
-    {user:{id:'001',name:'John'},content:'很讚',ctime:'03-10 09:00'}
-]
+//style
+import '../assets/sass/components/CommentItem.scss';
 
-function commentItem(){
+
+function commentItem(props){
+    const{data}=props;
+
     return (
         <div>
-
+            <div className='itemSpace'>
+                <div className='textContainer'>
+                    {data.map(
+                        item=>(
+                        <div>
+                            <span className='userName'>{item.user.name}</span>
+                            <p className='time'>{item.ctime}</p>
+                            <p>{item.content}</p>
+                        </div>
+                        )
+                    )}
+                </div>
+            </div>
         </div>
     );
 }
